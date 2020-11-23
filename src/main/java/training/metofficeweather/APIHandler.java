@@ -18,7 +18,7 @@ public class APIHandler {
     }
 
     private String getKey() throws IOException {
-        return Files.readString(Path.of("key.txt")).strip();
+        return Files.readString(Path.of("keys/key.txt")).strip();
     }
 
     private WebTarget getDefaultTarget() {
