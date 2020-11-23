@@ -9,7 +9,9 @@ import java.util.ArrayList;
 public class Locations {
     @JsonProperty(value="Location")
     private ArrayList<Location> locationList;
-
+    public Location getFirst(){
+        return locationList.get(0);
+    }
     public void printAll() {
         for (Location location: locationList) {
             location.display();

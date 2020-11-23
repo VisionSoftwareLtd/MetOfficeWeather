@@ -14,4 +14,9 @@ public class Location {
     public void display() {
         System.out.println(name);
     }
+
+    public String getId() {
+        return id;
+    }
+
 }

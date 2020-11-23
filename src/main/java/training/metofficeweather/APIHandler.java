@@ -33,4 +33,15 @@ public class APIHandler {
         Root root = response.readEntity(Root.class);
         return root.getLocations();
     }
+
+    public Forecast getForecast(Location location){
+        String locationId = location.getId();
+        Response response = webTarget.path(locationId)
+                .queryParam("res","3hourly")
+                .queryParam("key", key)
+                .request()
+                .get();
+        Forecast forecast = response.readEntity(Forecast.class);
+        return forecast;
+    }
 }
